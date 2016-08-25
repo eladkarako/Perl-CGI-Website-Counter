@@ -1,0 +1,56 @@
+Thank you for downloading sclite001.
+
+# File = sclite001.
+# Author = David Stanley (htmlite).
+# Created = April 2002.
+# Cost = Free.
+
+sclite001.cgi
+This is a download counter script.  It will keep store a download count of the filename.  The count files have a "dat" extension.  For this script to work, you should have your own "cgi-bin" capability.
+
+You can use this to count normal links or download files such as ZIP files. Either way, it will work for only one extension type (at this time). Version 2 will be able to process various extension types.
+
+In this zip file you will notice 1 file.
+
+1. View the cgi file in a text editor.
+- Adjust the PERL path if required.
+- Adjust the file extension type if required. (near the end of the script).
+- Adjust the last code line with the path to your script download folder.
+
+2. Upload the file to your cgi-bin folder in ASCII mode.
+
+3. CHMOD the cgi file to 755.
+
+4. To activate a count on a file, you have to enter a query string at the end of your href value.  For example, if your file to download is called "MyFile.zip" then a link to the script would look like...
+<a href="cgi-bin/sclite001.cgi?filename=MyFile"> Click Here To Download </a>
+
+Depending on your host configuration, you may require a starting / in that so it is...
+"/cgi-bin/sclite001.cgi?filename=MyFile"
+Or if all else fails, try the full URL such as...
+"http://www.yourdomainname.com/cgi-bin/sclite001.cgi?filename=MyFile"
+
+* Keep the "?filename=" part the same. Do not change it.
+
+* Do not enter an extension on the end in the HREF value.  The counter script assumes the extension type automatically as specified before.
+
+5. To display the count number, you can use an SSI call such as :
+This script has been downloaded <!--#include virtual="cgi-bin/sclite001.dat" --> times!
+
+You may have to adjust the path settings accordingly for your server specs.  You may require a starting / in that so it is...
+<!--#include virtual="/cgi-bin/sclite001.dat" -->
+Or if all else fails, try the full URL such as...
+<!--#include virtual="http://www.yourdomain.com/cgi-bin/sclite001.dat" -->
+Or you may have to use FILE instead of VIRTUAL in that command line.  It all depends on your server setup.
+
+This counter will work for multiple download script counts, but they must all be the same extension format and must all be found in the same directory.  Future improvements on this script will happen as time permits.
+
+Please do not distribute this script.  We'd like to keep a more accurate count on the script's use as people download it from HTMlite.
+
+If you have any questions or comments about this script, please post it in the FORUM area of HTMlite.
+
+The information, instructions, associated scripts, and files are distributed on an "as is" basis without warranty.  The author shall not have any liability to any person or entity with the respect to any loss or damage caused or alleged to be caused directly or indirectly by these items.  In other words... use these scripts at your own risk.
+
+Cheers!
+David.
+HTMlite administrator
+http://www.htmlite.com/
